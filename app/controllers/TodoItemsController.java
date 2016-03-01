@@ -10,8 +10,15 @@ import java.util.List;
  */
 public class TodoItemsController {
 
+    private TodoItemDao todoItemDao;
+
+    public TodoItem getTodoItem(long id){
+        todoItemDao = new TodoItemDao();
+return todoItemDao.findByID(id);
+    }
+
     public String getTodoListAsStr() {
-        TodoItemDao todoItemDao = new TodoItemDao();
+        todoItemDao = new TodoItemDao();
         List<TodoItem> list = todoItemDao.findAll();
         String listStr = "";
         for (TodoItem item : list) {

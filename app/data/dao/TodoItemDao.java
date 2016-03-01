@@ -31,6 +31,7 @@ public class TodoItemDao implements GenericDAO<TodoItem> {
 
     @Override
     public TodoItem findByID(long id) {
-        return DemoDataProvider.genListOfTodoItems(1).get(0);
+        int i = (int)id-1;
+        return DemoDataProvider.genListOfTodoItems(i+2).get(++i);
     }
 }
