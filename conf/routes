@@ -7,7 +7,7 @@ GET     /                           controllers.Application.index()
 GET     /todolist                   controllers.Application.todolist()
 GET     /todolist/:id               controllers.Application.todoitem(id: Long)
 
-POST  /login                        controllers.Use....
+POST  /login                        controllers.UserController.login()
 
 
 

@@ -1,7 +1,6 @@
 package controllers;
 
-import com.google.gson.Gson;
-import models.TodoItem;
+//import com.google.gson.Gson;
 import play.mvc.Controller;
 import play.mvc.Result;
 import views.html.index;
@@ -19,11 +18,12 @@ public class Application extends Controller {
     public Result todolist(){
         return ok(todolistpage.render(todoItemsController.getTodoListAsStr()));
     }
-    public Result todoitem(long id){
-        Gson gson = new Gson();
-        String jsonRes = gson.toJson(todoItemsController.getTodoItem(id), TodoItem.class);
+    public Result todoitem(long id) {
+//        Gson gson = new Gson();
+//        String jsonRes = gson.toJson(todoItemsController.getTodoItem(id), TodoItem.class);
 //        JsonNode json = Json.toJson(todoItemsController.getTodoItem(id));
-        return ok(todolistpage.render(jsonRes));
+//        return ok(todolistpage.render(jsonRes));
+        return ok();
     }
 
     public Result register(){
