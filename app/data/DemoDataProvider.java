@@ -23,7 +23,8 @@ public class DemoDataProvider {
     public static List<User> genListOfUsers(int amount){
         List<User> result = new ArrayList<>();
         for(int i = 0; i < amount; i++){
-            User item = new User("userName" + i, "paass");
+            User item = new User("userName" + i, "pass");
+            item.setEmail("email" + i + "@gmail.com");
             result.add(item);
         }
         return result;

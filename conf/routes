@@ -7,7 +7,15 @@ GET     /                           controllers.Application.index()
 GET     /todolist                   controllers.Application.todolist()
 GET     /todolist/:id               controllers.Application.todoitem(id: Long)
 
-POST  /login                        controllers.UserController.login()
+POST    /login                      controllers.UserController.submitLogin()
+GET     /login                      controllers.UserController.login()
+
+#GET     /profile                    controllers.UserController.profile()
+
+GET     /signup                     controllers.UserController.signup()
+POST    /signup                     controllers.UserController.signupPost()
+
+GET     /profile                    controllers.ProfileController.profile()
 
 
 

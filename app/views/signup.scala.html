@@ -3,11 +3,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Signup Page</title>
 </head>
-<body>
-
-@helper.form(action = routes.UserController.submitLogin(), 'id -> "form-signin") {
+@helper.form(action = routes.UserController.signupPost(), 'id -> "form-signin") {
 <h2>Please sign in</h2>
 @if(signupForm.hasGlobalErrors) {
 <p class="error">
@@ -24,8 +22,7 @@
 <input type="password" name="password" placeholder="Password" class="login-input" required="required">
 <button type="submit" class="login-submit">Log in</button>
 }
-
-
+<body>
 
 </body>
 </html>

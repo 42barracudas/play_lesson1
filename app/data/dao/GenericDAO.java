@@ -11,4 +11,5 @@ public interface GenericDAO<T> {
     void delete (T obj);
     void update(T t);
     T findByID(long id);
+    T find(T t);
 }
